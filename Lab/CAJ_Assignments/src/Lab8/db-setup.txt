@@ -1,0 +1,45 @@
+>mysql -u root -p
+
+mysql> create database testDB;
+mysql> use testDB;
+Database changed
+mysql> create table employee(id int PRIMARY KEY, name varchar(20), salary float);
+Query OK, 0 rows affected (0.01 sec)
+mysql> SHOW VARIABLES LIKE 'port';
++---------------+-------+
+| Variable_name | Value |
++---------------+-------+
+| port          | 3306  |
++---------------+-------+
+1 row in set (0.00 sec)
+
+mysql> DESCRIBE employee;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| id     | int(11)     | NO   | PRI | NULL    |       |
+| name   | varchar(20) | YES  |     | NULL    |       |
+| salary | float       | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+3 rows in set (0.02 sec)
+
+
+Also steps for "java.lang.ClassNotFoundException: com.mysql.jdbc.Driver" error
+
+1. Find the Connector/J JAR
+Check whether your project already contains a file such as mysql-connector-java-5.1.x.jar or mysql-connector-j-8.x.x.jar.
+If not, download MySQL Connector/J from the official site: MySQL Connector/J downloads.
+
+2. Add the JAR to your project
+
+In IntelliJ IDEA:
+1. Open File → Project Structure.
+2. Select Modules → Dependencies.
+3. Click + → JARs or Directories.
+4. Select the Connector/J .jar file.
+5. Apply the changes and click OK.
+
+3. Update db.properties
+db.driver=com.mysql.jdbc.Driver
+or
+db.driver=com.mysql.cj.jdbc.Driver
