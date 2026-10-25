@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CAJ.iml" filepath="$PROJECT_DIR$/CAJ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CAJ_Assignments/CAJ_Assignments.iml" filepath="$PROJECT_DIR$/../CAJ_Assignments/CAJ_Assignments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../innerClass/innerClass.iml" filepath="$PROJECT_DIR$/../innerClass/innerClass.iml" />
+    </modules>
+  </component>
+</project>
