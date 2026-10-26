@@ -1,0 +1,46 @@
+CREATE DATABASE CourseDB;
+USE CourseDB;
+
+CREATE TABLE Student (
+    Student_ID INT PRIMARY KEY,
+    Student_Name VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) NOT NULL UNIQUE,
+    Phone VARCHAR(15)
+);
+
+CREATE TABLE Course (
+    Course_ID INT PRIMARY KEY,
+    Course_Name VARCHAR(100) NOT NULL,
+    Credits INT NOT NULL CHECK (Credits BETWEEN 1 AND 6),
+    Capacity INT NOT NULL CHECK (Capacity > 0),
+    Available_Seats INT NOT NULL,
+    CHECK (Available_Seats >= 0 AND Available_Seats <= Capacity)
+);
+
+CREATE TABLE Registration (
+    Registration_ID INT PRIMARY KEY,
+    Student_ID INT NOT NULL,
+    Course_ID INT NOT NULL,
+    Registration_Date DATE NOT NULL,
+    Status VARCHAR(20) NOT NULL DEFAULT 'Active'
+        CHECK (Status IN ('Active', 'Cancelled')),
+
+    FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID),
+    FOREIGN KEY (Course_ID) REFERENCES Course(Course_ID),
+
+    UNIQUE (Student_ID, Course_ID)
+);
+
+CREATE TABLE Activity_Log (
+    Log_ID INT AUTO_INCREMENT PRIMARY KEY,
+    Activity VARCHAR(100) NOT NULL,
+    Details VARCHAR(255),
+    Activity_Time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO Course
+(Course_ID, Course_Name, Credits, Capacity, Available_Seats)
+VALUES
+(101, 'Java Programming', 4, 2, 2),
+(102, 'Database Systems', 3, 3, 3),
+(103, 'Web Development', 4, 2, 2);

@@ -1,0 +1,245 @@
+I am preparing for my CAJ mid-semester exam. I will provide my course syllabuslesson plan and the course PPTsnotes that I currently have with me.
+
+Act as my mid-semester study teacher and organizer.
+
+## 1. Organize the material
+
+For every topic found in the files
+
+- Identify the LessonSyllabus number (L1, L2, etc.) it belongs to.
+- Show
+  - L# → Topic
+  - What the syllabus says about this topic
+  - Which filePPT contains the topic
+  - Relevant subtopics from the file
+- Keep the original syllabus structure.
+- Also identify which topics are prerequisites for the confirmed exam topics.
+
+## 2. Teach me from the provided files
+
+For each topic
+
+- Strictly use the information, terminology, examples, code, diagrams, formulas, and methods given in my files as the primary source.
+- Explain everything in a beginner-friendly, step-by-step manner.
+- Do not assume I already understand the basics.
+- Explain important terms before using them.
+- Use examples, diagrams, flowcharts, classobject diagrams, inheritance diagrams, and code walkthroughs wherever they genuinely help.
+- Clearly separate
+  - What I need to understand
+  - What I need to remember
+  - What I should be able to writeexplain in the exam
+
+For Javacode-based topics, explain the code step-by-step and show what happens during execution where useful.
+
+## 3. Handle missing or incomplete material
+
+Before teaching each topic, give a source status
+
+- ✅ From my files — sufficiently covered.
+- ⚠️ Partially covered — present, but something important for mid-sem preparation is missing.
+- 🌐 Outside source needed — not sufficiently present in my files.
+
+Only use outside resources when
+
+1. The topic is missing from my files, OR
+2. The provided material is insufficient for reasonable mid-semester-level preparation.
+
+Before using outside information, tell me
+
+- What is missing
+- Why it is needed
+- Where the information came from
+- Approximately how much information is being added
+- Whether it is essential for the exam or supplementary
+
+Clearly label it as
+
+ 🌐 Outside Source
+
+Do not silently add outside knowledge.
+
+Do not add advanced information merely because it is commonly taught in JavaCAJ. Keep the focus on my syllabus and exam.
+
+## 4. Exam preparation
+
+For every topic, provide
+
+- Core concepts
+- Important definitions
+- Important syntaxcode
+- Important differencescomparisons
+- Examples
+- Likely exam questions
+- Common mistakesconfusions
+- Short revision summary
+
+For codeprogramming topics, also provide
+
+- Important syntax
+- Code structure
+- Step-by-step execution
+- Expected output where applicable
+- Common coding mistakes
+- What I should be able to write from memory
+
+If a topic depends on another topic, explicitly say
+
+ Prerequisite You should understand X first because...
+
+## 5. Confirmed exam topics — HIGH PRIORITY
+
+I have been given the following confirmedexpected question-topic structure for the mid-sem exam
+
+### Q1 → OOP Concepts + Features of Java
+Focus on
+- OOP concepts
+- Features of Java
+- Important definitions
+- Differencescomparisons where relevant
+- Examples that help explain the concepts
+
+### Q2 → Class Concepts + Data Members + Methods + Constructors
+Focus on
+- Classes and objects
+- Class structure
+- Data members
+- Methods
+- Constructors
+- Constructor behavior and usage
+- Relevant Java syntax and examples
+- Differences between related concepts
+
+### Q3 → Method Overloading + Inner Classes
+Focus on
+- Method overloading
+- Rules for overloading
+- Examplescode
+- Inner classes
+- Typesusage if included in my course material
+- Common examcode questions
+
+### Q4 → Inheritance + Abstract Classes + Interfaces
+Focus especially on
+- Inheritance
+- Types of inheritance relevant to Java
+- `extends`
+- Abstract classes
+- `abstract`
+- Interfaces
+- `implements`
+- Differences between abstract classes and interfaces
+- Code examples and execution
+- Common exam questions and mistakes
+
+### Q5 → Database Concepts
+Focus on
+- Database fundamentals
+- Important terminology
+- Concepts explicitly included in my syllabusmaterial
+- Examples and likely theory questions
+
+### Priority rule
+
+These confirmed topics have the highest priority.
+
+My study order should therefore be
+
+Confirmed topic → prerequisites needed for that topic → next confirmed topic → prerequisites → remaining syllabus
+
+Do not make me study unrelated lower-priority topics first.
+
+If a prerequisite is necessary to properly understand a confirmed topic, identify it and teach it before or together with that confirmed topic.
+
+For example
+
+Classes & Objects → MethodsConstructors → Method Overloading
+
+or
+
+Classes & Objects → Inheritance → Abstract Classes → Interfaces
+
+Use the actual dependency structure from my syllabusmaterial rather than assuming these exact relationships.
+
+After all confirmed topics and their necessary prerequisites are covered, move on to the remaining syllabus.
+
+## 6. Important exam rule
+
+The confirmed question structure is my highest study priority, but do not assume that the remaining topics are completely irrelevant.
+
+Prepare the confirmed topics first, then cover the remaining syllabus according to their importance and prerequisites.
+
+If the provided material contradicts the confirmed question structure, point this out instead of silently choosing one.
+
+---
+
+# COURSE SPECIFIC
+
+Subject CAJ
+
+Exam Mid-Semester Exam
+
+Mid-Semester Marks 50 marks
+
+Confirmed question structure 5 major topic areas corresponding approximately to Q1–Q5 above.
+
+The handwritten exam information I provided should be treated as an exam-priority reference, while my official syllabuscourse material remains the primary source for what needs to be studied.
+
+---
+
+# WHEN I UPLOAD THE FILES
+
+First give me
+
+### A. Syllabus → Material Mapping
+
+Show
+
+L# → Topic → Relevant PPTFile → Subtopics
+
+for the complete syllabus.
+
+### B. Confirmed Topic Mapping
+
+Map the confirmed questions to the syllabus
+
+Q1 → Topic → L# → Relevant files
+
+Q2 → Topic → L# → Relevant files
+
+and so on.
+
+### C. Coverage Check
+
+For every important topic, show
+
+- ✅ Fully covered
+- ⚠️ Partially covered
+- ❌ Not found
+
+Also identify whether any confirmed exam topic is missing or insufficiently covered.
+
+### D. Prerequisites
+
+Show what I need to learn before each confirmed question
+
+Prerequisite → Confirmed Topic
+
+### E. Priority Study Plan
+
+Divide the syllabus into
+
+Priority 1 — Confirmed questions
+
+Priority 2 — Prerequisites required for confirmed questions
+
+Priority 3 — Remaining important syllabus
+
+Priority 4 — Lower-priorityremaining topics
+
+Then give me the recommended study order.
+
+Do not immediately start teaching.
+
+After giving me the mapping, coverage check, prerequisites, and study plan, wait for me to say
+
+“Start Q1”, “Start L#”, or specify a particular topic.
