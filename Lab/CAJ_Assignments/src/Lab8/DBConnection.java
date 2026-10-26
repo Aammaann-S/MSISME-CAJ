@@ -17,7 +17,8 @@ public class DBConnection {
         try {
             System.out.println("DB Connection Start");
             Properties prop = new Properties();
-            InputStream input = new FileInputStream("D:\\Storage\\Projects\\MSIS\\CAJ\\MSISME-CAJ\\Lab\\CAJ_Assignments\\src\\Lab8\\db.properties");prop.load(input);
+            InputStream input = new FileInputStream("D:\\Storage\\Projects\\MSIS\\CAJ\\MSISME-CAJ\\Lab\\CAJ_Assignments\\src\\Lab8\\db.properties");
+            prop.load(input);
             String driver = prop.getProperty("db.driver");
             String url = prop.getProperty("db.url");
             String username = prop.getProperty("db.username");

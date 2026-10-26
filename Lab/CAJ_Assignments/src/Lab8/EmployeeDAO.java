@@ -66,7 +66,8 @@ public class EmployeeDAO {
                 logger.info("ID" + rs.getInt("id") +
                         ", Name:" + rs.getString("name") +
                         ", Salary:" + rs.getDouble("salary"));
-                System.out.println("ID" + rs.getInt("id")+", Name:" + rs.getString("name")+", Salary:" + rs.getDouble("salary"));
+                System.out.println("ID" + rs.getInt("id") + ", Name:" + rs.getString("name") + ", Salary:"
+                        + rs.getDouble("salary"));
             }
 
         } catch (SQLException e) {

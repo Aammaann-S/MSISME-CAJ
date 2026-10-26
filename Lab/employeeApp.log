@@ -1,0 +1,447 @@
+Oct 25, 2026 10:05:29 PM Lab8.EmployeeDAO insertEmployee
+INFO: 1Employee Inserted Successfully
+Oct 25, 2026 10:05:29 PM Lab8.EmployeeDAO insertEmployee
+INFO: 1Employee Inserted Successfully
+Oct 25, 2026 10:05:29 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID101, Name:Abc, Salary:50000.0
+Oct 25, 2026 10:05:29 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID102, Name:DEF, Salary:30000.0
+Oct 25, 2026 10:05:56 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID101, Name:Abc, Salary:50000.0
+Oct 25, 2026 10:05:56 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID102, Name:DEF, Salary:30000.0
+Oct 25, 2026 10:29:44 PM Lab8.EmployeeDAO insertEmployee
+SEVERE: Error Inserting Employee
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '101' for key 'PRIMARY'
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1040)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2490)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2651)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2734)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2458)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2375)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2359)
+	at Lab8.EmployeeDAO.insertEmployee(EmployeeDAO.java:44)
+	at Lab8.MainApp.main(MainApp.java:11)
+
+Oct 25, 2026 10:29:44 PM Lab8.EmployeeDAO insertEmployee
+SEVERE: Error Inserting Employee
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '102' for key 'PRIMARY'
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1040)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2490)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2651)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2734)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2458)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2375)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2359)
+	at Lab8.EmployeeDAO.insertEmployee(EmployeeDAO.java:44)
+	at Lab8.MainApp.main(MainApp.java:12)
+
+Oct 25, 2026 10:29:44 PM Lab8.EmployeeDAO insertEmployee
+INFO: 1 Employee(s) Inserted Successfully
+Oct 25, 2026 10:29:44 PM Lab8.EmployeeDAO insertEmployee
+INFO: 1 Employee(s) Inserted Successfully
+Oct 25, 2026 10:29:44 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID101, Name:Abc, Salary:50000.0
+Oct 25, 2026 10:29:44 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID102, Name:DEF, Salary:30000.0
+Oct 25, 2026 10:29:44 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID103, Name:Rahul, Salary:45000.0
+Oct 25, 2026 10:29:44 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID104, Name:Priya, Salary:60000.0
+Oct 25, 2026 10:29:44 PM Lab8.EmployeeDAO updateEmployee
+INFO: 1 Employee(s) Updated Successfully
+Oct 25, 2026 10:29:44 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID101, Name:Abc, Salary:50000.0
+Oct 25, 2026 10:29:44 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID102, Name:Deepak, Salary:35000.0
+Oct 25, 2026 10:29:44 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID103, Name:Rahul, Salary:45000.0
+Oct 25, 2026 10:29:44 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID104, Name:Priya, Salary:60000.0
+Oct 25, 2026 10:29:44 PM Lab8.EmployeeDAO updateEmployee
+INFO: No employee found with ID: 999
+Oct 25, 2026 10:29:44 PM Lab8.EmployeeDAO deleteEmployee
+INFO: 1Employee Deleted Successfully
+Oct 25, 2026 10:29:44 PM Lab8.EmployeeDAO deleteEmployee
+INFO: 0No Employee(s) found
+Oct 25, 2026 10:29:44 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID101, Name:Abc, Salary:50000.0
+Oct 25, 2026 10:29:44 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID102, Name:Deepak, Salary:35000.0
+Oct 25, 2026 10:29:44 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID104, Name:Priya, Salary:60000.0
+Oct 25, 2026 10:29:59 PM Lab8.EmployeeDAO insertEmployee
+SEVERE: Error Inserting Employee
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '101' for key 'PRIMARY'
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1040)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2490)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2651)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2734)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2458)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2375)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2359)
+	at Lab8.EmployeeDAO.insertEmployee(EmployeeDAO.java:44)
+	at Lab8.MainApp.main(MainApp.java:11)
+
+Oct 25, 2026 10:29:59 PM Lab8.EmployeeDAO insertEmployee
+SEVERE: Error Inserting Employee
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '102' for key 'PRIMARY'
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1040)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2490)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2651)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2734)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2458)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2375)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2359)
+	at Lab8.EmployeeDAO.insertEmployee(EmployeeDAO.java:44)
+	at Lab8.MainApp.main(MainApp.java:12)
+
+Oct 25, 2026 10:29:59 PM Lab8.EmployeeDAO insertEmployee
+INFO: 1 Employee(s) Inserted Successfully
+Oct 25, 2026 10:29:59 PM Lab8.EmployeeDAO insertEmployee
+SEVERE: Error Inserting Employee
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '104' for key 'PRIMARY'
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1040)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2490)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2651)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2734)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2458)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2375)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2359)
+	at Lab8.EmployeeDAO.insertEmployee(EmployeeDAO.java:44)
+	at Lab8.MainApp.main(MainApp.java:14)
+
+Oct 25, 2026 10:29:59 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID101, Name:Abc, Salary:50000.0
+Oct 25, 2026 10:29:59 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID102, Name:Deepak, Salary:35000.0
+Oct 25, 2026 10:29:59 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID103, Name:Rahul, Salary:45000.0
+Oct 25, 2026 10:29:59 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID104, Name:Priya, Salary:60000.0
+Oct 25, 2026 10:29:59 PM Lab8.EmployeeDAO updateEmployee
+INFO: 1 Employee(s) Updated Successfully
+Oct 25, 2026 10:29:59 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID101, Name:Abc, Salary:50000.0
+Oct 25, 2026 10:29:59 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID102, Name:Deepak, Salary:35000.0
+Oct 25, 2026 10:29:59 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID103, Name:Rahul, Salary:45000.0
+Oct 25, 2026 10:29:59 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID104, Name:Priya, Salary:60000.0
+Oct 25, 2026 10:29:59 PM Lab8.EmployeeDAO updateEmployee
+INFO: No employee found with ID: 999
+Oct 25, 2026 10:29:59 PM Lab8.EmployeeDAO deleteEmployee
+INFO: 1Employee Deleted Successfully
+Oct 25, 2026 10:29:59 PM Lab8.EmployeeDAO deleteEmployee
+INFO: 0No Employee(s) found
+Oct 25, 2026 10:29:59 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID101, Name:Abc, Salary:50000.0
+Oct 25, 2026 10:29:59 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID102, Name:Deepak, Salary:35000.0
+Oct 25, 2026 10:29:59 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID104, Name:Priya, Salary:60000.0
+Oct 25, 2026 11:21:41 PM Lab8.EmployeeDAO insertEmployee
+SEVERE: Error Inserting Employee
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '101' for key 'PRIMARY'
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1040)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2490)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2651)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2734)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2458)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2375)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2359)
+	at Lab8.EmployeeDAO.insertEmployee(EmployeeDAO.java:42)
+	at Lab8.MainApp.main(MainApp.java:11)
+
+Oct 25, 2026 11:21:41 PM Lab8.EmployeeDAO insertEmployee
+SEVERE: Error Inserting Employee
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '102' for key 'PRIMARY'
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1040)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2490)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2651)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2734)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2458)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2375)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2359)
+	at Lab8.EmployeeDAO.insertEmployee(EmployeeDAO.java:42)
+	at Lab8.MainApp.main(MainApp.java:12)
+
+Oct 25, 2026 11:21:41 PM Lab8.EmployeeDAO insertEmployee
+INFO: 1 Employee(s) Inserted Successfully
+Oct 25, 2026 11:21:41 PM Lab8.EmployeeDAO insertEmployee
+SEVERE: Error Inserting Employee
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '104' for key 'PRIMARY'
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1040)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2490)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2651)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2734)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2458)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2375)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2359)
+	at Lab8.EmployeeDAO.insertEmployee(EmployeeDAO.java:42)
+	at Lab8.MainApp.main(MainApp.java:14)
+
+Oct 25, 2026 11:21:41 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID101, Name:Abc, Salary:50000.0
+Oct 25, 2026 11:21:41 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID102, Name:Deepak, Salary:35000.0
+Oct 25, 2026 11:21:41 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID103, Name:Rahul, Salary:45000.0
+Oct 25, 2026 11:21:41 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID104, Name:Priya, Salary:60000.0
+Oct 25, 2026 11:21:41 PM Lab8.EmployeeDAO updateEmployee
+INFO: 1 Employee(s) Updated Successfully
+Oct 25, 2026 11:21:41 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID101, Name:Abc, Salary:50000.0
+Oct 25, 2026 11:21:41 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID102, Name:Deepak, Salary:35000.0
+Oct 25, 2026 11:21:41 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID103, Name:Rahul, Salary:45000.0
+Oct 25, 2026 11:21:41 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID104, Name:Priya, Salary:60000.0
+Oct 25, 2026 11:21:41 PM Lab8.EmployeeDAO updateEmployee
+INFO: No employee found with ID: 999
+Oct 25, 2026 11:21:41 PM Lab8.EmployeeDAO deleteEmployee
+INFO: 1Employee Deleted Successfully
+Oct 25, 2026 11:21:41 PM Lab8.EmployeeDAO deleteEmployee
+INFO: 0No Employee(s) found
+Oct 25, 2026 11:21:41 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID101, Name:Abc, Salary:50000.0
+Oct 25, 2026 11:21:41 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID102, Name:Deepak, Salary:35000.0
+Oct 25, 2026 11:21:41 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID104, Name:Priya, Salary:60000.0
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO insertEmployee
+INFO: 1 Employee(s) Inserted Successfully
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO insertEmployee
+INFO: 1 Employee(s) Inserted Successfully
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO insertEmployee
+INFO: 1 Employee(s) Inserted Successfully
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO insertEmployee
+INFO: 1 Employee(s) Inserted Successfully
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID101, Name:Abc, Salary:50000.0
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID102, Name:Deepak, Salary:35000.0
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID104, Name:Priya, Salary:60000.0
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID1001, Name:Abc, Salary:50000.0
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID1002, Name:DEF, Salary:30000.0
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID1003, Name:Rahul, Salary:45000.0
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID1004, Name:Priya, Salary:60000.0
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO updateEmployee
+INFO: 1 Employee(s) Updated Successfully
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID101, Name:Abc, Salary:50000.0
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID102, Name:Deepak, Salary:35000.0
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID104, Name:Priya, Salary:60000.0
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID1001, Name:Abc, Salary:50000.0
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID1002, Name:Deepak, Salary:35000.0
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID1003, Name:Rahul, Salary:45000.0
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID1004, Name:Priya, Salary:60000.0
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO updateEmployee
+INFO: No employee found with ID: 9990
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO deleteEmployee
+INFO: 1Employee Deleted Successfully
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO deleteEmployee
+INFO: 0No Employee(s) found
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID101, Name:Abc, Salary:50000.0
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID102, Name:Deepak, Salary:35000.0
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID104, Name:Priya, Salary:60000.0
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID1001, Name:Abc, Salary:50000.0
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID1002, Name:Deepak, Salary:35000.0
+Oct 25, 2026 11:22:55 PM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID1004, Name:Priya, Salary:60000.0
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO insertEmployee
+SEVERE: Error Inserting Employee
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1001' for key 'PRIMARY'
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1040)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2490)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2651)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2734)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2458)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2375)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2359)
+	at Lab8.EmployeeDAO.insertEmployee(EmployeeDAO.java:42)
+	at Lab8.MainApp.main(MainApp.java:11)
+
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO insertEmployee
+SEVERE: Error Inserting Employee
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1002' for key 'PRIMARY'
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1040)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2490)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2651)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2734)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2458)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2375)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2359)
+	at Lab8.EmployeeDAO.insertEmployee(EmployeeDAO.java:42)
+	at Lab8.MainApp.main(MainApp.java:12)
+
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO insertEmployee
+INFO: 1 Employee(s) Inserted Successfully
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO insertEmployee
+SEVERE: Error Inserting Employee
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1004' for key 'PRIMARY'
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1040)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2490)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2651)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2734)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2458)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2375)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2359)
+	at Lab8.EmployeeDAO.insertEmployee(EmployeeDAO.java:42)
+	at Lab8.MainApp.main(MainApp.java:14)
+
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID101, Name:Abc, Salary:50000.0
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID102, Name:Deepak, Salary:35000.0
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID104, Name:Priya, Salary:60000.0
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID1001, Name:Abc, Salary:50000.0
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID1002, Name:Deepak, Salary:35000.0
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID1003, Name:Rahul, Salary:45000.0
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID1004, Name:Priya, Salary:60000.0
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO updateEmployee
+INFO: 1 Employee(s) Updated Successfully
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID101, Name:Abc, Salary:50000.0
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID102, Name:Deepak, Salary:35000.0
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID104, Name:Priya, Salary:60000.0
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID1001, Name:Abc, Salary:50000.0
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID1002, Name:Deepak, Salary:35000.0
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID1003, Name:Rahul, Salary:45000.0
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID1004, Name:Priya, Salary:60000.0
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO updateEmployee
+INFO: No employee found with ID: 9990
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO deleteEmployee
+INFO: 1Employee Deleted Successfully
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO deleteEmployee
+INFO: 0No Employee(s) found
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID101, Name:Abc, Salary:50000.0
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID102, Name:Deepak, Salary:35000.0
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID104, Name:Priya, Salary:60000.0
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID1001, Name:Abc, Salary:50000.0
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID1002, Name:Deepak, Salary:35000.0
+Oct 26, 2026 7:30:47 AM Lab8.EmployeeDAO fetchAllEmployee
+INFO: ID1004, Name:Priya, Salary:60000.0
