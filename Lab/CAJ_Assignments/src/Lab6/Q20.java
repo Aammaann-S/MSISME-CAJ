@@ -3,7 +3,9 @@ package Lab6;
 import java.io.*;
 import java.util.Scanner;
 
-//Q20: SIS
+//Q20 Lab Assignment -1 : SIS
+//Q1 Lab Assignment -2 : SIS
+
 public class Q20 {
 
     private static BufferedReader br = null;
@@ -12,21 +14,24 @@ public class Q20 {
     private static Scanner sc = new Scanner(System.in);
     private static int choice;
 
-    public static void initStream(){
+    public static void initStream() {
         try {
-            br = new BufferedReader(new FileReader("D:\\Storage\\Projects\\MSIS\\CAJ\\MSISME-CAJ\\Lab\\CAJ_Assignments\\src\\Lab6\\login.txt"));
-            brl = new BufferedReader(new FileReader("D:\\Storage\\Projects\\MSIS\\CAJ\\MSISME-CAJ\\Lab\\CAJ_Assignments\\src\\Lab6\\students_details.txt"));
-            bwl = new BufferedWriter(new FileWriter("D:\\Storage\\Projects\\MSIS\\CAJ\\MSISME-CAJ\\Lab\\CAJ_Assignments\\src\\Lab6\\students_details.txt",true));
-        }
-        catch (FileNotFoundException e){
+            br = new BufferedReader(new FileReader(
+                    "D:\\Storage\\Projects\\MSIS\\CAJ\\MSISME-CAJ\\Lab\\CAJ_Assignments\\src\\Lab6\\login.txt"));
+            brl = new BufferedReader(new FileReader(
+                    "D:\\Storage\\Projects\\MSIS\\CAJ\\MSISME-CAJ\\Lab\\CAJ_Assignments\\src\\Lab6\\students_details.txt"));
+            bwl = new BufferedWriter(new FileWriter(
+                    "D:\\Storage\\Projects\\MSIS\\CAJ\\MSISME-CAJ\\Lab\\CAJ_Assignments\\src\\Lab6\\students_details.txt",
+                    true));
+        } catch (FileNotFoundException e) {
             // throw new RuntimeException(e);
             System.out.println(e);
-        }catch (IOException e){
+        } catch (IOException e) {
             System.out.println(e);
         }
     }
 
-    public static boolean authenticate(){
+    public static boolean authenticate() {
         System.out.println("Enter Username");
         String user = sc.next();
         System.out.println("Enter Password");
@@ -34,15 +39,14 @@ public class Q20 {
 
         try {
             String credentials = br.readLine();
-            while(credentials!=null){
+            while (credentials != null) {
                 String[] profile = credentials.split(" ");
-                if(profile[0].equals(user) && profile[1].equals(password)){
+                if (profile[0].equals(user) && profile[1].equals(password)) {
                     return true;
                 }
                 credentials = br.readLine();
             }
-        }
-        catch (IOException e){
+        } catch (IOException e) {
             System.out.println(e);
         }
 
@@ -54,9 +58,7 @@ public class Q20 {
         try {
             BufferedReader tempReader = new BufferedReader(
                     new FileReader(
-                            "D:\\Storage\\Projects\\MSIS\\CAJ\\MSISME-CAJ\\Lab\\CAJ_Assignments\\src\\Lab6\\students_details.txt"
-                    )
-            );
+                            "D:\\Storage\\Projects\\MSIS\\CAJ\\MSISME-CAJ\\Lab\\CAJ_Assignments\\src\\Lab6\\students_details.txt"));
 
             String student;
             boolean found = false;
@@ -88,7 +90,7 @@ public class Q20 {
         }
     }
 
-    public static void insertRecord(){
+    public static void insertRecord() {
         System.out.println("Enter Registration Number");
         String regno = sc.next();
         System.out.println("Enter Name");
@@ -108,33 +110,6 @@ public class Q20 {
 
     }
 
-//    public static void updateRecord(){
-//        System.out.println("Enter Registration Number Update");
-//        String upregno = sc.next();
-//        System.out.println("Enter new Name");
-//        String newname = sc.next();
-//        System.out.println("Enter new Place");
-//        String newplace = sc.next();
-//        String updatedRecord = upregno + " " + newname + " " + newplace;
-//
-//        try {
-//            String student = brl.readLine();
-//            while(student!=null){
-//                String[] profile = student.split(" ");
-//                if(profile[0].equals(upregno)){
-//                    bwl.write(updatedRecord);
-//                    bwl.newLine();
-//                    bwl.flush();
-//                    break;
-//                }
-//                student = br.readLine();
-//            }
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-//
-//    }
-
     public static void updateRecord() {
         System.out.println("Enter Registration Number Update");
         String upregno = sc.next();
@@ -149,11 +124,9 @@ public class Q20 {
 
         try {
             File file = new File(
-                    "D:\\Storage\\Projects\\MSIS\\CAJ\\MSISME-CAJ\\Lab\\CAJ_Assignments\\src\\Lab6\\students_details.txt"
-            );
+                    "D:\\Storage\\Projects\\MSIS\\CAJ\\MSISME-CAJ\\Lab\\CAJ_Assignments\\src\\Lab6\\students_details.txt");
 
-            BufferedReader tempReader =
-                    new BufferedReader(new FileReader(file));
+            BufferedReader tempReader = new BufferedReader(new FileReader(file));
 
             StringBuilder data = new StringBuilder();
             String student;
@@ -179,8 +152,7 @@ public class Q20 {
                 return;
             }
 
-            BufferedWriter tempWriter =
-                    new BufferedWriter(new FileWriter(file));
+            BufferedWriter tempWriter = new BufferedWriter(new FileWriter(file));
 
             tempWriter.write(data.toString());
             tempWriter.close();
@@ -198,11 +170,9 @@ public class Q20 {
 
         try {
             File file = new File(
-                    "D:\\Storage\\Projects\\MSIS\\CAJ\\MSISME-CAJ\\Lab\\CAJ_Assignments\\src\\Lab6\\students_details.txt"
-            );
+                    "D:\\Storage\\Projects\\MSIS\\CAJ\\MSISME-CAJ\\Lab\\CAJ_Assignments\\src\\Lab6\\students_details.txt");
 
-            BufferedReader tempReader =
-                    new BufferedReader(new FileReader(file));
+            BufferedReader tempReader = new BufferedReader(new FileReader(file));
 
             StringBuilder data = new StringBuilder();
             String student;
@@ -222,8 +192,7 @@ public class Q20 {
 
             tempReader.close();
 
-            BufferedWriter tempWriter =
-                    new BufferedWriter(new FileWriter(file));
+            BufferedWriter tempWriter = new BufferedWriter(new FileWriter(file));
 
             tempWriter.write(data.toString());
             tempWriter.close();
@@ -239,30 +208,29 @@ public class Q20 {
         }
     }
 
-    public static void closeStream(){
+    public static void closeStream() {
 
         try {
-            if(br != null){
+            if (br != null) {
                 br.close();
             }
-            if(brl != null){
+            if (brl != null) {
                 brl.close();
             }
-            if(bwl != null){
+            if (bwl != null) {
                 bwl.close();
             }
-            if(sc != null){
+            if (sc != null) {
                 sc.close();
             }
-        }
-        catch(IOException e){
+        } catch (IOException e) {
             System.out.println(e);
         }
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         initStream();
-        if(authenticate()){
+        if (authenticate()) {
             System.out.println("Valid User.");
             do {
                 System.out.println("\nMENU >>>");
@@ -297,8 +265,7 @@ public class Q20 {
                         System.out.println("Invalid Option!");
                 }
             } while (choice != 5);
-        }
-        else {
+        } else {
             System.out.println("Invalid User!");
         }
         System.out.println("------------- CLOSE APP -----------");

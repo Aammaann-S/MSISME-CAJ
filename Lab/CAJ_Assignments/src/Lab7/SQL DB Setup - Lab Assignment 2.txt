@@ -1,0 +1,321 @@
+Lab Assignment - 2
+Task - 2
+
+mysql> CREATE DATABASE BankingDB;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> USE BankingDB;
+Database changed
+mysql> CREATE TABLE Branch (
+    ->     branchName VARCHAR(30) PRIMARY KEY,
+    ->     branchCity VARCHAR(30),
+    ->     assets DOUBLE
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> CREATE TABLE Customer (
+    ->     customerName VARCHAR(30) PRIMARY KEY,
+    ->     customerStreet VARCHAR(30),
+    ->     customerCity VARCHAR(30)
+    -> );
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> CREATE TABLE Loan (
+    ->     branchName VARCHAR(30),
+    ->     loanNumber VARCHAR(10) PRIMARY KEY,
+    ->     amount DOUBLE,
+    ->
+    ->     FOREIGN KEY (branchName)
+    ->     REFERENCES Branch(branchName)
+    -> );
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> CREATE TABLE Borrower (
+    ->     customerName VARCHAR(30),
+    ->     loanNumber VARCHAR(10),
+    ->
+    ->     PRIMARY KEY (customerName, loanNumber),
+    ->
+    ->     FOREIGN KEY (customerName)
+    ->     REFERENCES Customer(customerName),
+    ->
+    ->     FOREIGN KEY (loanNumber)
+    ->     REFERENCES Loan(loanNumber)
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> CREATE TABLE Account (
+    ->     branchName VARCHAR(30),
+    ->     accountNumber VARCHAR(10) PRIMARY KEY,
+    ->     balance DOUBLE,
+    ->
+    ->     FOREIGN KEY (branchName)
+    ->     REFERENCES Branch(branchName)
+    -> );
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> CREATE TABLE Depositor (
+    ->     customerName VARCHAR(30),
+    ->     accountNumber VARCHAR(10),
+    ->
+    ->     PRIMARY KEY (customerName, accountNumber),
+    ->
+    ->     FOREIGN KEY (customerName)
+    ->     REFERENCES Customer(customerName),
+    ->
+    ->     FOREIGN KEY (accountNumber)
+    ->     REFERENCES Account(accountNumber)
+    -> );
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> INSERT INTO Branch VALUES
+    -> ('Downtown', 'Brooklyn', 9000000),
+    -> ('Redwood', 'Palo Alto', 2100000),
+    -> ('Perryridge', 'Horseneck', 1700000),
+    -> ('Mianus', 'Horseneck', 400000),
+    -> ('Round Hill', 'Horseneck', 8000000),
+    -> ('Pownal', 'Bennington', 300000),
+    -> ('North Town', 'Rye', 3700000),
+    -> ('Brighton', 'Brooklyn', 7100000);
+Query OK, 8 rows affected (0.00 sec)
+Records: 8  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO Customer VALUES
+    -> ('Jones', 'Main', 'Harrison'),
+    -> ('Smith', 'North', 'Rye'),
+    -> ('Hayes', 'Main', 'Harrison'),
+    -> ('Curry', 'North', 'Rye'),
+    -> ('Lindsay', 'Park', 'Pittsfield'),
+    -> ('Turner', 'Putnam', 'Stamford'),
+    -> ('Williams', 'Nassau', 'Princeton'),
+    -> ('Adams', 'Spring', 'Pittsfield'),
+    -> ('Johnson', 'Alma', 'Palo Alto'),
+    -> ('Glenn', 'Stand Hill', 'Woodside'),
+    -> ('Brooks', 'Senator', 'Brooklyn'),
+    -> ('Green', 'Walnut', 'Stamford'),
+    -> ('Jackson', NULL, NULL),
+    -> ('Lindsey', NULL, NULL);
+Query OK, 14 rows affected (0.04 sec)
+Records: 14  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO Loan VALUES
+    -> ('Downtown', 'L-17', 1000),
+    -> ('Redwood', 'L-23', 2000),
+    -> ('Perryridge', 'L-15', 1500),
+    -> ('Downtown', 'L-14', 1500),
+    -> ('Mianus', 'L-93', 500),
+    -> ('Round Hill', 'L-11', 900),
+    -> ('Perryridge', 'L-16', 1300);
+Query OK, 7 rows affected (0.01 sec)
+Records: 7  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO Borrower VALUES
+    -> ('Jones', 'L-17'),
+    -> ('Smith', 'L-23'),
+    -> ('Hayes', 'L-15'),
+    -> ('Jackson', 'L-14'),
+    -> ('Curry', 'L-93'),
+    -> ('Smith', 'L-11'),
+    -> ('Williams', 'L-17'),
+    -> ('Adams', 'L-16');
+Query OK, 8 rows affected (0.02 sec)
+Records: 8  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO Account VALUES
+    -> ('Downtown', 'A-101', 500),
+    -> ('Mianus', 'A-215', 700),
+    -> ('Perryridge', 'A-102', 400),
+    -> ('Round Hill', 'A-305', 350),
+    -> ('Brighton', 'A-201', 900),
+    -> ('Redwood', 'A-222', 700),
+    -> ('Brighton', 'A-217', 750);
+Query OK, 7 rows affected (0.02 sec)
+Records: 7  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO Depositor VALUES
+    -> ('Johnson', 'A-101'),
+    -> ('Smith', 'A-215'),
+    -> ('Hayes', 'A-102'),
+    -> ('Turner', 'A-305'),
+    -> ('Johnson', 'A-201'),
+    -> ('Jones', 'A-217'),
+    -> ('Lindsey', 'A-222');
+Query OK, 7 rows affected (0.01 sec)
+Records: 7  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM Branch;
++------------+------------+---------+
+| branchName | branchCity | assets  |
++------------+------------+---------+
+| Brighton   | Brooklyn   | 7100000 |
+| Downtown   | Brooklyn   | 9000000 |
+| Mianus     | Horseneck  |  400000 |
+| North Town | Rye        | 3700000 |
+| Perryridge | Horseneck  | 1700000 |
+| Pownal     | Bennington |  300000 |
+| Redwood    | Palo Alto  | 2100000 |
+| Round Hill | Horseneck  | 8000000 |
++------------+------------+---------+
+8 rows in set (0.00 sec)
+
+mysql> SELECT * FROM Customer;
++--------------+----------------+--------------+
+| customerName | customerStreet | customerCity |
++--------------+----------------+--------------+
+| Adams        | Spring         | Pittsfield   |
+| Brooks       | Senator        | Brooklyn     |
+| Curry        | North          | Rye          |
+| Glenn        | Stand Hill     | Woodside     |
+| Green        | Walnut         | Stamford     |
+| Hayes        | Main           | Harrison     |
+| Jackson      | NULL           | NULL         |
+| Johnson      | Alma           | Palo Alto    |
+| Jones        | Main           | Harrison     |
+| Lindsay      | Park           | Pittsfield   |
+| Lindsey      | NULL           | NULL         |
+| Smith        | North          | Rye          |
+| Turner       | Putnam         | Stamford     |
+| Williams     | Nassau         | Princeton    |
++--------------+----------------+--------------+
+14 rows in set (0.00 sec)
+
+mysql> SELECT * FROM Loan;
++------------+------------+--------+
+| branchName | loanNumber | amount |
++------------+------------+--------+
+| Round Hill | L-11       |    900 |
+| Downtown   | L-14       |   1500 |
+| Perryridge | L-15       |   1500 |
+| Perryridge | L-16       |   1300 |
+| Downtown   | L-17       |   1000 |
+| Redwood    | L-23       |   2000 |
+| Mianus     | L-93       |    500 |
++------------+------------+--------+
+7 rows in set (0.00 sec)
+
+mysql> SELECT * FROM Borrower;
++--------------+------------+
+| customerName | loanNumber |
++--------------+------------+
+| Smith        | L-11       |
+| Jackson      | L-14       |
+| Hayes        | L-15       |
+| Adams        | L-16       |
+| Jones        | L-17       |
+| Williams     | L-17       |
+| Smith        | L-23       |
+| Curry        | L-93       |
++--------------+------------+
+8 rows in set (0.00 sec)
+
+mysql> SELECT * FROM Account;
++------------+---------------+---------+
+| branchName | accountNumber | balance |
++------------+---------------+---------+
+| Downtown   | A-101         |     500 |
+| Perryridge | A-102         |     400 |
+| Brighton   | A-201         |     900 |
+| Mianus     | A-215         |     700 |
+| Brighton   | A-217         |     750 |
+| Redwood    | A-222         |     700 |
+| Round Hill | A-305         |     350 |
++------------+---------------+---------+
+7 rows in set (0.00 sec)
+
+mysql> SELECT * FROM Depositor;
++--------------+---------------+
+| customerName | accountNumber |
++--------------+---------------+
+| Johnson      | A-101         |
+| Hayes        | A-102         |
+| Johnson      | A-201         |
+| Smith        | A-215         |
+| Jones        | A-217         |
+| Lindsey      | A-222         |
+| Turner       | A-305         |
++--------------+---------------+
+7 rows in set (0.00 sec)
+
+
+
+Q1. Find the names of all branches in Loan relation.
+mysql> SELECT DISTINCT branchName
+    -> FROM Loan;
++------------+
+| branchName |
++------------+
+| Downtown   |
+| Mianus     |
+| Perryridge |
+| Redwood    |
+| Round Hill |
++------------+
+5 rows in set (0.02 sec)
+
+Q2. Find all loan numbers for loans made at the Perryridge branch with loan amounts greater than $1200.
+mysql> SELECT loanNumber
+    -> FROM Loan
+    -> WHERE branchName = 'Perryridge'
+    -> AND amount > 1200;
++------------+
+| loanNumber |
++------------+
+| L-15       |
+| L-16       |
++------------+
+2 rows in set (0.00 sec)
+
+Q3. Find all loan numbers for loans made at the Perryridge branch with loan amounts greater than $90000 and less than $100000.
+mysql> SELECT loanNumber
+    -> FROM Loan
+    -> WHERE branchName = 'Perryridge'
+    -> AND amount > 90000
+    -> AND amount < 100000;
+Empty set (0.00 sec)
+
+Q4. For all customers who have a loan from the bank, find their names and loan numbers.
+mysql> SELECT customerName, loanNumber
+    -> FROM Borrower;
++--------------+------------+
+| customerName | loanNumber |
++--------------+------------+
+| Smith        | L-11       |
+| Jackson      | L-14       |
+| Hayes        | L-15       |
+| Adams        | L-16       |
+| Jones        | L-17       |
+| Williams     | L-17       |
+| Smith        | L-23       |
+| Curry        | L-93       |
++--------------+------------+
+8 rows in set (0.00 sec)
+
+Q5. Find the names and loan numbers of all customers who have a loan at the Perryridge branch.
+mysql> SELECT B.customerName, B.loanNumber
+    -> FROM Borrower B
+    -> JOIN Loan L
+    -> ON B.loanNumber = L.loanNumber
+    -> WHERE L.branchName = 'Perryridge';
++--------------+------------+
+| customerName | loanNumber |
++--------------+------------+
+| Hayes        | L-15       |
+| Adams        | L-16       |
++--------------+------------+
+2 rows in set (0.00 sec)
+
+Q6. Find the names of all branches that have assets greater than at least one branch in Brooklyn.
+mysql> SELECT branchName
+    -> FROM Branch
+    -> WHERE assets > ANY (
+    ->     SELECT assets
+    ->     FROM Branch
+    ->     WHERE branchCity = 'Brooklyn'
+    -> );
++------------+
+| branchName |
++------------+
+| Downtown   |
+| Round Hill |
++------------+
+2 rows in set (0.00 sec)
