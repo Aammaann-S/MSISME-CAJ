@@ -1,0 +1,88 @@
+-- CAJ Lab Examination Database Setup
+
+mysql -u root -p
+
+--------------- CREATION ---------------
+
+mysql> create database collegeDB;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use collegeDB;
+Database changed
+mysql> create table Student(Student_ID int PRIMARY KEY, Student_Name varchar(50), Program varchar(50), Semester int, Email varchar(50) UNIQUE);
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> create table Subject(Subject_ID int PRIMARY KEY, Subject_Name varchar(50), Credits int, Semester int);
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> create table Examination(Exam_ID int PRIMARY KEY, Subject_ID int, Exam_Date Date, Max_Marks int, FOREIGN KEY(Subject_ID) REFERENCES Subject(Subject_ID));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> create table Result(Student_ID int, Exam_ID int, Marks_Obtained int, Grade varchar(5), FOREIGN KEY(Student_ID) REFERENCES Student(Student_ID), FOREIGN KEY(Exam_ID) REFERENCES Examination(Exam_ID));
+Query OK, 0 rows affected (0.05 sec)
+
+
+--------------- INSERTION ---------------
+
+
+mysql> insert into Student values(1, 'Aman', 'ME CSE', 1, 'aman@mail.com');
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into Student values(2, 'Veds', 'CSE', 1, 'veds@mail.com');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from Student;
++------------+--------------+---------+----------+---------------+
+| Student_ID | Student_Name | Program | Semester | Email         |
++------------+--------------+---------+----------+---------------+
+|          1 | Aman         | ME CSE  |        1 | aman@mail.com |
+|          2 | Veds         | CSE     |        1 | veds@mail.com |
++------------+--------------+---------+----------+---------------+
+2 rows in set (0.00 sec)
+
+mysql> insert into Subject values(11, 'CAJ', 3, 1);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Subject values(12, 'CAJ Lab', 1, 1);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from Subject;
++------------+--------------+---------+----------+
+| Subject_ID | Subject_Name | Credits | Semester |
++------------+--------------+---------+----------+
+|         11 | CAJ          |       3 |        1 |
+|         12 | CAJ Lab      |       1 |        1 |
++------------+--------------+---------+----------+
+2 rows in set (0.00 sec)
+
+mysql> insert into Examination values(101, 11, '2026-10-20', 50);
+Query OK, 1 row affected, 1 warning (0.01 sec)
+
+mysql> insert into Examination values(102, 12, '2026-10-26', 30);
+Query OK, 1 row affected, 1 warning (0.06 sec)
+
+mysql> select * from Examination;
++---------+------------+------------+-----------+
+| Exam_ID | Subject_ID | Exam_Date  | Max_Marks |
++---------+------------+------------+-----------+
+|     101 |         11 | 2026-10-20 |        50 |
+|     102 |         12 | 2026-10-26 |        30 |
++---------+------------+------------+-----------+
+2 rows in set (0.00 sec)
+
+mysql> insert into Result values(1, 101, 27, 'B');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Result values(2, 101, 32, 'B');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from Result;
++------------+---------+----------------+-------+
+| Student_ID | Exam_ID | Marks_Obtained | Grade |
++------------+---------+----------------+-------+
+|          1 |     101 |             27 | B     |
+|          2 |     101 |             32 | B     |
++------------+---------+----------------+-------+
+2 rows in set (0.00 sec)
+
+mysql>
